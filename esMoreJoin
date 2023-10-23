@@ -1,0 +1,35 @@
+
+SELECT *
+FROM meal
+INNER JOIN ingredient ON meal.ingredient_id = ingredient.ingredient_id;
+
+SELECT *
+FROM meal
+LEFT JOIN ingredient ON meal.ingredient_id = ingredient.ingredient_id;
+
+SELECT *
+FROM meal
+FULL JOIN ingredient ON meal.ingredient_id = ingredient.ingredient_id;
+
+SELECT *
+FROM meal
+RIGHT JOIN ingredient ON meal.ingredient_id = ingredient.ingredient_id;
+
+SELECT *
+FROM meal
+LEFT JOIN ingredient ON meal.ingredient_id = ingredient.ingredient_id
+WHERE ingredient.ingredient_id IS NULL;
+
+SELECT *
+FROM meal
+RIGHT JOIN ingredient ON meal.ingredient_id = ingredient.ingredient_id
+WHERE meal.ingredient_id IS NULL;
+
+SELECT *
+FROM meal
+FULL JOIN ingredient ON meal.ingredient_id = ingredient.ingredient_id
+WHERE meal.ingredient_id IS NULL OR ingredient.ingredient_id IS NULL;
+
+
+
+
